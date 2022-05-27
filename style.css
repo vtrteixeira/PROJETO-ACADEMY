@@ -1,13 +1,12 @@
 /* Font Code */
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /* Page Configs */
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
@@ -28,7 +27,6 @@ body {
 
 /* Header + Navbar */
 
-
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -37,23 +35,19 @@ body {
     padding: 20px;
 }
 
-a {
-    text-decoration: none;
-}
-
-.logo {
+.navbar .logo {
     font-size: 1.8rem;
     letter-spacing: 0.4rem;
     cursor: pointer;
     color: #fff;
 }
 
-.nav-list {
+.navbar .nav-list {
     display: flex;
     list-style: none;
 }
 
-.nav-list a {
+.navbar .nav-list a {
     font-size: 1.6rem;
     margin-left: 5rem;
     padding-bottom: 2px;
@@ -62,11 +56,9 @@ a {
     transform: 2ms ease-in;
     position: relative;
     text-transform: uppercase;
-
-
 }
 
-li a:before {
+.navbar .nav-list li a:before {
     content: '';
     position: absolute;
     bottom: 0px;
@@ -77,12 +69,11 @@ li a:before {
     transition: all 1.5s ease;
 }
 
-li a:hover:before {
+.navbar .nav-list li a:hover:before {
     width: 100%;
 }
 
 /* Menu Responsivo */
-
 .mobile-menu {
     display: none;
     cursor: pointer;
@@ -90,11 +81,9 @@ li a:hover:before {
 
 .mobile-menu img {
     width: 28px;
-    
 }
 
-/* MAIN - Primary content */
-
+/* Main */
 main {
     display: flex;
     flex-direction: column;
@@ -104,8 +93,7 @@ main {
     height: 90vh;
 }
 
-/* content primary text */
-
+/* Textos - mainText - subText */
 .main-text {
     width: 850px;
     font-size: 5rem;
@@ -122,7 +110,6 @@ main {
 }
 
 /* Botões */
-
 .buttons {
     display: flex;
     flex-direction: row;
@@ -130,7 +117,6 @@ main {
 }
 
 .buttons button {
-
     width: 250px;
     height: 60px;
     cursor: pointer;
@@ -142,8 +128,7 @@ main {
     letter-spacing: 0.2rem;
     border-radius: 20px;
     position: relative;
-    transition: 1.5s;
-    
+    transition: 1.5s;  
 }
 
 .buttons button:before {
@@ -165,50 +150,16 @@ main {
 }
 
 /* Responsividade */
-
-@media screen and (max-width: 650px) { 
- 
-    .main-text h1 {
-        width: 150px!important;
-        font-size: 1rem!important;
-        margin-bottom: 0px;
-    }
-
-    .main-subtext {
-        font-size: 1rem;
-    }
-
-    .buttons {
-        flex-direction: column;   
-    }
-
-    .buttons button {
-        width: 350px;
-    }
-}
-
-@media screen and (max-width: 820px) { 
- 
-    .main-text {
-        width: 680px;
-        font-size: 4rem;
-    }
-
-    .main-subtext {
-        font-size: 1.5rem;
-    }
-}
-
 @media screen and (max-width: 950px) {
    
+    .navbar { 
+        justify-content: space-between;
+    }
+
     .nav-list {
         display: flex;
     }
 
-    .navbar { 
-        justify-content: space-between;
-    }
-    
     .mobile-menu {
         display: block;
         z-index: 10;
@@ -243,5 +194,173 @@ main {
         font-size: 1.6rem;
     }
 
+    .main-text {
+        width: 700px;
+        font-size: 4.3rem;
+    }
+
+    .main-subtext {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 820px) { 
+ 
+    .navbar .logo {
+        font-size: 1.8rem;  
+    }
+
+    .mobile-menu img {
+        width: 35px;
+        
+    }
+
+    main {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .main-text {
+        width: 710px;
+        font-size: 4.2rem;
+    }
+
+    .main-subtext {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 40px;   
+    }
+
+    .buttons button {
+        width: 580px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+
+    .buttons button:before {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 730px) { 
+ 
+    .navbar .logo {
+        font-size: 1.7rem;  
+    }
+
+    .mobile-menu img {
+        width: 28px;
+        
+    }
+
+    .main-text {
+        width: 600px;
+        font-size: 3.8rem;
+    }
+
+    .main-subtext {
+        font-size: 1.7rem;
+    }
+
+    .buttons button {
+        width: 560px;
+        height: 70px;
+        font-size: 1.4rem;
+    }
+
+    .buttons button:before {
+        height: 70px;
     
+    }
+}
+
+@media screen and (max-width: 680px) { 
+ 
+    .main-text {
+        width: 520px;
+        font-size: 3.8rem;
+    }
+
+    .main-subtext {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;   
+    }
+
+    .buttons button {
+        width: 400px;
+        height: 70px;
+    }
+
+    .buttons button:before {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) { 
+ 
+    .navbar .logo {
+        font-size: 1.5rem;  
+    }
+
+    .mobile-menu img {
+        width: 25px;
+        
+    }
+   
+    .main-text {
+        width: 480px;
+        font-size: 3.5rem;
+    }
+
+    .main-subtext {
+        font-size: 1.4rem;
+    }
+
+    .buttons {
+        flex-direction: column;   
+    }
+
+    .buttons button {
+        width: 310px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .buttons button:before {
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+ 
+    .main-text {
+        width: 350px;
+        font-size: 2.3rem;
+    }
+
+    .main-subtext {
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        flex-direction: column;   
+    }
+
+    .buttons button {
+        width: 310px;
+    }
+
+    .navbar .logo {
+        font-size: 1.4rem;  
+    }
+
+    .mobile-menu img {
+        width: 25px;
+    }
 }
